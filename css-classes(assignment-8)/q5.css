@@ -1,0 +1,208 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    font-family: Arial, sans-serif;
+
+    background: #f4f6f8;
+}
+
+/* Header */
+header {
+    padding: 20px 8%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: #2c3e50;
+    color: white;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+
+    transition: 0.3s ease;
+}
+
+nav a:hover {
+    color: #3498db;
+}
+
+/* Main */
+main {
+    flex: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px 20px;
+}
+
+/* Card */
+.card {
+    width: 700px;
+
+    display: flex;
+    gap: 30px;
+
+    padding: 30px;
+
+    background: white;
+
+    border: 1px solid #ddd;
+    border-radius: 15px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Image */
+.image-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-section img {
+    width: 150px;
+    height: 150px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 5px solid #3498db;
+}
+
+/* Content */
+.content {
+    flex: 1;
+}
+
+.content h2 {
+    margin-top: 0;
+}
+
+/* Form */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input,
+textarea {
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #ccc;
+    border-radius: 8px;
+
+    font-size: 15px;
+
+    transition: 0.3s ease;
+}
+
+textarea {
+    height: 100px;
+    resize: none;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+
+    border-color: #3498db;
+
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.3);
+}
+
+/* Buttons */
+.buttons {
+    display: flex;
+    gap: 10px;
+
+    margin-top: 10px;
+}
+
+button {
+    padding: 12px 25px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #3498db;
+    color: white;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background: #217dbb;
+    transform: translateY(-2px);
+}
+
+.reset {
+    background: #95a5a6;
+}
+
+.reset:hover {
+    background: #7f8c8d;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+
+    padding: 15px;
+
+    background: #2c3e50;
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 700px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        gap: 15px;
+    }
+
+    .card {
+        width: 100%;
+
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+    .content {
+        width: 100%;
+    }
+}
