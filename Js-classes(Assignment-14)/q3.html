@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+            background: #f4f6f9;
+        }
+        .panel {
+            max-width: 700px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        input {
+            padding: 10px;
+            width: 230px;
+            max-width: 90%;
+            margin: 5px 0;
+        }
+        button {
+            padding: 10px 14px;
+            margin: 5px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            background: #245b46;
+        }
+        .book {
+            border-bottom: 1px solid #ddd;
+            padding: 12px 0;
+        }
+        #message { font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="panel">
+        <h1>Library Management System</h1>
+
+        <label for="isbn">Enter Book ISBN:</label><br>
+        <input type="text" id="isbn" placeholder="e.g. 101">
+
+        <div>
+            <button id="issueBtn">Issue Book</button>
+            <button id="returnBtn">Return Book</button>
+            <button id="searchBtn">Search Book</button>
+        </div>
+
+        <button id="availableBtn">Show Available Books</button>
+        <button id="allBtn">Show All Books</button>
+
+        <p id="message" role="status"></p>
+        <div id="bookList"></div>
+    </div>
+
+    <script src="q3.js"></script>
+</body>
+</html>

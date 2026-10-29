@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #eef2f7;
+            padding: 30px;
+        }
+        form {
+            max-width: 400px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px #ccc;
+        }
+        h1 { text-align: center; }
+        .field { margin-bottom: 18px; }
+        input {
+            box-sizing: border-box;
+            width: 100%;
+            padding: 11px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+        }
+        .error {
+            display: block;
+            margin-top: 5px;
+            font-size: 13px;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            color: white;
+            background: #176b45;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #result { text-align: center; }
+    </style>
+</head>
+<body>
+    <form id="studentForm" novalidate>
+        <h1>Student Registration</h1>
+
+        <div class="field">
+            <label for="studentName">Name</label>
+            <input type="text" id="studentName" autocomplete="name">
+            <small class="error"></small>
+        </div>
+
+        <div class="field">
+            <label for="studentEmail">Email</label>
+            <input type="text" id="studentEmail" autocomplete="email">
+            <small class="error"></small>
+        </div>
+
+        <div class="field">
+            <label for="studentPhone">Phone</label>
+            <input type="text" id="studentPhone" inputmode="numeric"
+                   maxlength="10" autocomplete="tel">
+            <small class="error"></small>
+        </div>
+
+        <div class="field">
+            <label for="studentPassword">Password</label>
+            <input type="password" id="studentPassword"
+                   autocomplete="new-password">
+            <small class="error"></small>
+        </div>
+
+        <button type="submit">Register</button>
+        <p id="result" role="status"></p>
+    </form>
+
+    <script src="q2.js"></script>
+</body>
+</html>

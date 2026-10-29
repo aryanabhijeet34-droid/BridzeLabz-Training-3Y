@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Ticket Booking</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f4f8;
+            padding: 30px;
+        }
+        .container {
+            max-width: 430px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px #ccc;
+        }
+        .field { margin-bottom: 16px; }
+        label {
+            display: block;
+            margin-bottom: 6px;
+        }
+        input {
+            box-sizing: border-box;
+            width: 100%;
+            padding: 11px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+        }
+        .error {
+            display: block;
+            color: red;
+            margin-top: 5px;
+            font-size: 13px;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            color: white;
+            background: #713b9b;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #ticketOutput {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            white-space: pre-wrap;
+        }
+        .ticket {
+            background: #e7f7ec;
+            border: 1px solid #26934b;
+            color: #145c2b;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Movie Ticket Booking</h1>
+
+        <form id="bookingForm" novalidate>
+            <div class="field">
+                <label for="bookingName">Name</label>
+                <input type="text" id="bookingName" placeholder="Enter your name">
+                <small class="error"></small>
+            </div>
+
+            <div class="field">
+                <label for="bookingEmail">Email</label>
+                <input type="text" id="bookingEmail" placeholder="Enter your email">
+                <small class="error"></small>
+            </div>
+
+            <div class="field">
+                <label for="bookingSeats">Seats (1–10)</label>
+                <input type="number" id="bookingSeats" min="1" max="10"
+                       step="1" placeholder="Number of seats">
+                <small class="error"></small>
+            </div>
+
+            <button type="submit">Book Tickets</button>
+        </form>
+
+        <div id="ticketOutput" aria-live="polite"></div>
+    </div>
+
+    <script src="q5.js"></script>
+</body>
+</html>
